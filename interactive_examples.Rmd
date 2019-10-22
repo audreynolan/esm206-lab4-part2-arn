@@ -13,3 +13,38 @@ Here, we will practice creating some interactive graphs and tables, using built-
 
 - Interactive plots: {plotly}
 - Interactive tables: {DT}
+
+(use include = FALSE for zeo errors/messages/etc to show up in the markdwon doc)
+
+```{r, include = FALSE}
+
+# Attach packages: 
+
+library(tidyverse)
+library(plotly)
+library(DT)
+
+```
+
+### A. Interactive Graph of Iris Dimensions
+
+Using Edgar Anderson's famous 'iris' dataset
+
+echo = FALSE for this code chunk to not show up 
+orrrr if not in the entire doc then do echo = FALSE in the options set up top
+or use eval = FALSE to tell R not to evaluate this chuck rn, b/c it's not working properly
+
+```{r, echo = FALSE}
+
+iris_graph <- ggplot(data = iris, aes(x = Petal.Width, y = Petal.Length))+
+  geom_point(aes(size = Sepal.Width, 
+                 color = Species), 
+             alpha = 0.5)+
+  theme_minimal()+
+  labs(title = "My  Iris Graph", x = "Petal Width (cm)", y = "Petal Length (cm)")
+
+# iris_graph
+
+ggplotly(iris_graph)
+
+```
