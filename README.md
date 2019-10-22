@@ -1,2 +1,9 @@
-# esm206-lab4-part2-arn
-Learning to create a repo 
+# My awesome ReadMe ! ! 
+
+- yay
+- bullet points 
+
+
+and other **useful info**
+
+*YEEE*
